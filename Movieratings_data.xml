@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movieratings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<userrating>
+		<userid>1</userid>
+		<movie>Lady in the Water</movie>
+		<rating>2.5</rating>
+	</userrating>
+	<userrating>
+		<userid>1</userid>
+		<movie>Snakes on a Plane</movie>
+		<rating>3.5</rating>
+	</userrating>
+	<userrating>
+		<userid>1</userid>
+		<movie>Just My Luck</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>1</userid>
+		<movie>Superman Returns</movie>
+		<rating>3.5</rating>
+	</userrating>
+	<userrating>
+		<userid>1</userid>
+		<movie>You, Me and Dupree</movie>
+		<rating>2.5</rating>
+	</userrating>
+	<userrating>
+		<userid>1</userid>
+		<movie>The Night Listener</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>2</userid>
+		<movie>Lady in the Water</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>2</userid>
+		<movie>Snakes on a Plane</movie>
+		<rating>3.5</rating>
+	</userrating>
+	<userrating>
+		<userid>2</userid>
+		<movie>Just My Luck</movie>
+		<rating>1.5</rating>
+	</userrating>
+	<userrating>
+		<userid>2</userid>
+		<movie>Superman Returns</movie>
+		<rating>5.0</rating>
+	</userrating>
+	<userrating>
+		<userid>2</userid>
+		<movie>The Night Listener</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>2</userid>
+		<movie>You, Me and Dupree</movie>
+		<rating>3.5</rating>
+	</userrating>
+	<userrating>
+		<userid>3</userid>
+		<movie>Lady in the Water</movie>
+		<rating>2.5</rating>
+	</userrating>
+	<userrating>
+		<userid>3</userid>
+		<movie>Snakes on a Plane</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>3</userid>
+		<movie>Superman Returns</movie>
+		<rating>3.5</rating>
+	</userrating>
+	<userrating>
+		<userid>3</userid>
+		<movie>The Night Listener</movie>
+		<rating>4.0</rating>
+	</userrating>
+	<userrating>
+		<userid>4</userid>
+		<movie>Snakes on a Plane</movie>
+		<rating>3.5</rating>
+	</userrating>
+	<userrating>
+		<userid>4</userid>
+		<movie>Just My Luck</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>4</userid>
+		<movie>The Night Listener</movie>
+		<rating>4.5</rating>
+	</userrating>
+	<userrating>
+		<userid>4</userid>
+		<movie>Superman Returns</movie>
+		<rating>4.0</rating>
+	</userrating>
+	<userrating>
+		<userid>4</userid>
+		<movie>You, Me and Dupree</movie>
+		<rating>2.5</rating>
+	</userrating>
+	<userrating>
+		<userid>5</userid>
+		<movie>Lady in the Water</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>5</userid>
+		<movie>Snakes on a Plane</movie>
+		<rating>4.0</rating>
+	</userrating>
+	<userrating>
+		<userid>5</userid>
+		<movie>Just My Luck</movie>
+		<rating>2.0</rating>
+	</userrating>
+	<userrating>
+		<userid>5</userid>
+		<movie>Superman Returns</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>5</userid>
+		<movie>The Night Listener</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>5</userid>
+		<movie>You, Me and Dupree</movie>
+		<rating>2.0</rating>
+	</userrating>
+	<userrating>
+		<userid>6</userid>
+		<movie>Lady in the Water</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>6</userid>
+		<movie>Snakes on a Plane</movie>
+		<rating>4.0</rating>
+	</userrating>
+	<userrating>
+		<userid>6</userid>
+		<movie>The Night Listener</movie>
+		<rating>3.0</rating>
+	</userrating>
+	<userrating>
+		<userid>6</userid>
+		<movie>Superman Returns</movie>
+		<rating>5.0</rating>
+	</userrating>
+	<userrating>
+		<userid>6</userid>
+		<movie>You, Me and Dupree</movie>
+		<rating>3.5</rating>
+	</userrating>
+	<userrating>
+		<userid>7</userid>
+		<movie>Snakes on a Plane</movie>
+		<rating>4.5</rating>
+	</userrating>
+	<userrating>
+		<userid>7</userid>
+		<movie>You, Me and Dupree</movie>
+		<rating>1.0</rating>
+	</userrating>
+	<userrating>
+		<userid>7</userid>
+		<movie>Superman Returns</movie>
+		<rating>4.0</rating>
+	</userrating>
+</movieratings>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<user>
+		<username>Lisa</username>
+		<userid>1</userid>
+	</user>
+	<user>
+		<username>Gene</username>
+		<userid>2</userid>
+	</user>
+	<user>
+		<username>Mike</username>
+		<userid>3</userid>
+	</user>
+	<user>
+		<username>Claudia</username>
+		<userid>4</userid>
+	</user>
+	<user>
+		<username>Mick</username>
+		<userid>5</userid>
+	</user>
+	<user>
+		<username>Jack</username>
+		<userid>6</userid>
+	</user>
+	<user>
+		<username>Toby</username>
+		<userid>7</userid>
+	</user>
+</users>

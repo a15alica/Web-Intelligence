@@ -1,0 +1,199 @@
+<head>
+  <meta charset="utf-8">
+  <title>Assignment 1</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+  <div style="display:flex;">
+    <div id="myDiv" style="margin:200 auto;"></div>
+  </div>
+  <script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+      }
+    };
+    xhttp.open("GET", "Movieratings_data.xml", true);
+    xhttp.send();
+    
+    function myFunction(xml) {
+      var xmlDoc, a, x, y, z; 
+      xmlDoc = xml.responseXML;
+      a = xmlDoc.getElementsByTagName("userrating");
+      x = xmlDoc.getElementsByTagName("userid");
+      y = xmlDoc.getElementsByTagName("movie");
+      z = xmlDoc.getElementsByTagName("rating");
+      
+      var sim = 0;
+      var array = [];
+      
+      for (i = 0; i < a.length; i++){
+        user1 = x[i].childNodes[0].nodeValue;
+        movie1 = y[i].childNodes[0].nodeValue;
+        rating1 = z[i].childNodes[0].nodeValue;
+        
+        for (j = 0; j < a.length; j++){
+          user2 =  x[j].childNodes[0].nodeValue;
+          movie2 = y[j].childNodes[0].nodeValue;
+          rating2 = z[j].childNodes[0].nodeValue;
+          var sim1 = 0;
+          if (user1 < user2 && movie1 == movie2){
+            var uuser1 = parseInt(user1);
+            var uuser2 = parseInt(user2);
+            
+            var rrating1 = parseFloat(rating1);
+            var rrating2 = parseFloat(rating2);
+            
+            sim1 += rrating1 - rrating2
+            sim = Math.pow(sim1, 2);
+            array.push([movie1, uuser1, uuser2, sim]);
+          }
+        }
+      }
+      
+      var simscore1 = 0;
+      var simscore2 = 0;
+      var simscore3 = 0;
+      var simscore4 = 0;
+      var simscore5 = 0;
+      var simscore6 = 0;
+      
+      for (k=0; k<array.length; k++){
+        m = array[k][0];
+        u1 = array[k][1];
+        u2 = array[k][2];
+        score = array[k][3];
+      
+        if (u1 == 7 || u2 == 7){
+          if (u1 == 1 || u2 == 1){
+            simscore1 = simscore1 + score;
+          }
+          if (u1 == 2 || u2 == 2){
+            simscore2 = simscore2 + score;
+          }
+          if (u1 == 3 || u2 == 3){
+            simscore3 = simscore3 + score;
+          }
+          if (u1 == 4 || u2 == 4){
+            simscore4 = simscore4 + score;
+          }
+          if (u1 == 5 || u2 == 5){
+            simscore5 = simscore5 + score;
+          }
+          if (u1 == 6 || u2 == 6){
+            simscore6 = simscore6 + score;
+          }
+        }
+      }
+      
+      var ss1 = Math.sqrt(simscore1);
+      var ss1inv = 1 / (1 + ss1);
+      var ss2 = Math.sqrt(simscore2);
+      var ss2inv = 1 / (1 + ss2);
+      var ss3 = Math.sqrt(simscore3);
+      var ss3inv = 1 / (1 + ss3);
+      var ss4 = Math.sqrt(simscore4);
+      var ss4inv = 1 / (1 + ss4);
+      var ss5 = Math.sqrt(simscore5);
+      var ss5inv = 1 / (1 + ss5);
+      var ss6 = Math.sqrt(simscore6);
+      var ss6inv = 1 / (1 + ss6);
+      
+      var WSLady1, WSLady2, WSLady3, WSLady4, WSLady5, WSLady6;
+      var WSLuck1, WSLuck2, WSLuck3, WSLuck4, WSLuck5, WSLuck6;
+      var WSNight1, WSNight2, WSNight3, WSNight4, WSNight5, WSNight6;
+      
+      for (o=0; o<a.length; o++){
+        
+        if (x[o].childNodes[0].nodeValue=="1"){
+          if (y[o].childNodes[0].nodeValue=="Lady in the Water"){
+            WSLady1 = z[o].childNodes[0].nodeValue * ss1inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="Just My Luck"){
+            WSLuck1 = z[o].childNodes[0].nodeValue * ss1inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="The Night Listener"){
+            WSNight1 = z[o].childNodes[0].nodeValue * ss1inv;
+          }
+        }
+        else if (x[o].childNodes[0].nodeValue=="2"){
+          if (y[o].childNodes[0].nodeValue=="Lady in the Water"){
+            WSLady2 = z[o].childNodes[0].nodeValue * ss2inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="Just My Luck"){
+            WSLuck2 = z[o].childNodes[0].nodeValue * ss2inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="The Night Listener"){
+            WSNight2 = z[o].childNodes[0].nodeValue * ss2inv;
+          }
+          
+        }
+        else if (x[o].childNodes[0].nodeValue=="3"){
+          if (y[o].childNodes[0].nodeValue=="Lady in the Water"){
+            WSLady3 = z[o].childNodes[0].nodeValue * ss3inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="Just My Luck"){
+            WSLuck3 = z[o].childNodes[0].nodeValue * ss3inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="The Night Listener"){
+            WSNight3 = z[o].childNodes[0].nodeValue * ss3inv;
+          }
+          
+        }else if (x[o].childNodes[0].nodeValue=="4"){
+          if (y[o].childNodes[0].nodeValue=="Lady in the Water"){
+            WSLady4 = z[o].childNodes[0].nodeValue * ss4inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="Just My Luck"){
+            WSLuck4 = z[o].childNodes[0].nodeValue * ss4inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="The Night Listener"){
+            WSNight4 = z[o].childNodes[0].nodeValue * ss4inv;
+          }
+          
+        }else if (x[o].childNodes[0].nodeValue=="5"){
+          if (y[o].childNodes[0].nodeValue=="Lady in the Water"){
+            WSLady5 = z[o].childNodes[0].nodeValue * ss5inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="Just My Luck"){
+            WSLuck5 = z[o].childNodes[0].nodeValue * ss5inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="The Night Listener"){
+            WSNight5 = z[o].childNodes[0].nodeValue * ss5inv;
+          }
+          
+        }else if (x[o].childNodes[0].nodeValue=="6"){
+          if (y[o].childNodes[0].nodeValue=="Lady in the Water"){
+            WSLady6 = z[o].childNodes[0].nodeValue * ss6inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="Just My Luck"){
+            WSLuck6 = z[o].childNodes[0].nodeValue * ss6inv;
+          }
+          else if (y[o].childNodes[0].nodeValue=="The Night Listener"){
+            WSNight6 = z[o].childNodes[0].nodeValue * ss6inv;
+          }
+        }
+      }
+      
+      var TotWSLady = WSLady1 + WSLady2 + WSLady3 + WSLady5 + WSLady6;
+      var TotWSLuck = WSLuck1 + WSLuck2 + WSLuck4 + WSLuck5;
+      var TotWSNight = WSNight1 + WSNight2 + WSNight3 + WSNight4 + WSNight5 + WSNight6;
+      
+      var SumSimLady = ss1inv + ss2inv + ss3inv + ss5inv + ss6inv;
+      var SumSimLuck = ss1inv + ss2inv + ss4inv + ss5inv;
+      var SumSimNight = ss1inv + ss2inv + ss3inv + ss4inv + ss5inv + ss6inv;
+      
+      var TotSumSimLady = TotWSLady / SumSimLady;
+      var TotSumSimLuck = TotWSLuck / SumSimLuck;
+      var TotSumSimNight =  TotWSNight / SumSimNight;
+      
+      var rec = "<b>Recommendations for Toby:</b><br><br>";
+      rec += "<table><tr><td>1.</td><td width='150px;'>The Night Listener</td><td>(" + TotSumSimNight + ")</tr>";
+      rec += "<tr><td>2.</td><td>Lady in the Water</td><td>(" + TotSumSimLady + ")</td></tr>";
+      rec += "<tr><td>3.</td><td>Just My Luck</td><td>(" + TotSumSimLuck + ")</td></tr></table>";
+      
+      document.getElementById("myDiv").innerHTML = rec;
+    }
+    
+  </script>
+</body>
